@@ -1,0 +1,40 @@
+<head>
+  <title>meteorcampraffle</title>
+</head>
+
+<body>
+  <h1 style="text-align:center">MeteorCamp NYC Raffle</h1>
+
+  {{> spinner}}
+</body>
+
+<template name="spinner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4" style="text-align:center">
+        {{#if currentSpin}}
+          <h2>{{currentSpin}}</h2>
+        {{/if}}
+      </div>
+    </div>
+    <div class="row" style="margin-top:50px">
+      <div class="col-md-4 col-md-offset-4" style="text-align:center">
+        <button class="btn btn-success spin-button">
+          Spin!
+        </button>
+      </div>
+    </div>
+    <div class="row" style="margin-top:50px">
+      <div class="col-md-4 col-md-offset-4" style="text-align:center">
+        {{#if winner}}
+          <h2>Winner: {{winner}}</h2>
+        {{/if}}
+      </div>
+    </div>
+    <div class="row" style="margin-top:200px">
+      <div class="col-md-4 col-md-offset-4" style="text-align:center">
+        <a href="http://www.curtismlarson.com">http://www.curtismlarson.com</a>
+      </div>
+    </div>
+  </div>
+</template>
